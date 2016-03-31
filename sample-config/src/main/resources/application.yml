@@ -1,10 +1,10 @@
 ---
 spring:
+  port: 8888
   cloud:
     config:
       server:
-        native:
-          searchLocations: classpath:/config
-
+        git:
+          uri: https://git.oschina.net/bushkarl/snatch-yml.git
 server:
-  port: 8888
+  port: 18888

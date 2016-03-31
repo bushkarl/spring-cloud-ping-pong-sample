@@ -3,6 +3,7 @@ package org.bk.consumer;
 import com.netflix.config.ConcurrentMapConfiguration;
 import org.apache.commons.configuration.AbstractConfiguration;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Bean;
 @EnableFeignClients
 @EnableHystrix
 @EnableHystrixDashboard
+@EnableAutoConfiguration
 public class PingApplication {
 
     public static void main(String[] args) {
