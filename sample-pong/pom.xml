@@ -16,7 +16,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -66,7 +65,7 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <configuration>
-                    <imageName>${project.name}:${project.version}</imageName>
+                    <imageName>${docker.image.prefix}/${project.name}:${project.version}</imageName>
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
                     <skipDockerBuild>false</skipDockerBuild>
                     <resources>
