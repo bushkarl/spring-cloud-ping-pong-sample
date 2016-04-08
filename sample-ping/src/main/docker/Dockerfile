@@ -1,4 +1,4 @@
-FROM java:8
+FROM daocloud.io/library/java
 VOLUME /tmp
 RUN mkdir /app
 ADD sample-ping-1.0.0-SNAPSHOT.jar /app/app.jar

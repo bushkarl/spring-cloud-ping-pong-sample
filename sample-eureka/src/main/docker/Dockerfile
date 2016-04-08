@@ -1,4 +1,4 @@
-FROM java:8
+FROM daocloud.io/library/java
 VOLUME /tmp
 ADD sample-eureka-1.0.0-SNAPSHOT.jar /app.jar
 RUN bash -c 'touch /app.jar'
