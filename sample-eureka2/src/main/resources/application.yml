@@ -1,0 +1,21 @@
+---
+server:
+  port: 8762
+
+spring:
+  application:
+    name: server2
+#  profiles: server2
+
+
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+eureka:
+  client:
+    hostname: server2
+    serviceUrl:
+      defaultZone: http://server1:8762/eureka/

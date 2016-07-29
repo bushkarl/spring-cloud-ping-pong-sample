@@ -1,7 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.bk</groupId>
@@ -16,7 +14,8 @@
         <module>sample-ping</module>
         <module>sample-pong</module>
         <module>sample-monitor</module>
-    </modules>
+        <module>sample-eureka2</module>
+  </modules>
 
     <parent>
         <groupId>org.springframework.cloud</groupId>
@@ -60,7 +59,6 @@
 		</dependency>
   	</dependencies>
   </dependencyManagement>
-  
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -70,7 +68,15 @@
             		<groupId>com.fasterxml.jackson.core</groupId>
             		<artifactId>jackson-databind</artifactId>
             	</exclusion>
+            	<exclusion>
+            		<groupId>org.springframework.boot</groupId>
+            		<artifactId>spring-boot-starter-tomcat</artifactId>
+            	</exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
